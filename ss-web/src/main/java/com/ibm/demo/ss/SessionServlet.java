@@ -46,7 +46,11 @@ public class SessionServlet extends HttpServlet {
         System.err.println("Error: cannot get server IP Address  : " + e.getMessage());
     }
 
-    out.println("<HTML><HEAD><TITLE>"+title+"</TITLE></HEAD>\n" +
+    out.println("<HTML><HEAD><TITLE>"+title+"</TITLE>\n" +
+                "<meta http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\">\n" +
+                "<meta http-equiv=\"Pragma\" content=\"no-cache\">\n" +
+                "<meta http-equiv=\"Expires\" content=\"0\">\n" +
+                "</HEAD>\n" +
                 "<BODY BGCOLOR=\"#FDF5E6\">\n" +
                 "<H1 ALIGN=\"CENTER\">" + heading + "</H1>\n" +
                 "<H2>Information on your HTTPSession:</H2>\n" +
