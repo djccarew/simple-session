@@ -20,7 +20,7 @@ public class SessionServlet extends HttpServlet {
     HttpSession session = request.getSession(true);
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
-    String title = "Searching the Web";
+    String title = "Simple HttpSession Demo";
     String heading;
     String serverIPAddress = "Unknown";
     Integer accessCount = new Integer(0);;

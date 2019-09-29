@@ -11,7 +11,7 @@ USER 1001
 
 # Add Hazelcast jar
 RUN mkdir /opt/ibm/wlp/usr/shared/resources/hazelcast
-COPY wlp/usr/shared/resources/hazelcast/*.jar /opt/ibm/wlp/usr/shared/resources/hazelcast/
+COPY wlp/usr/shared/resources/hazelcast/hazelcast-all-3.12.2.jar /opt/ibm/wlp/usr/shared/resources/hazelcast/
 USER root
 RUN chown 1001:0 /opt/ibm/wlp/usr/shared/resources/hazelcast/*.jar
 USER 1001
