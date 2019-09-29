@@ -25,9 +25,9 @@ public class SessionServlet extends HttpServlet {
     String serverIPAddress = "Unknown";
     Integer accessCount = new Integer(0);;
     if (session.isNew()) {
-      heading = "Welcome, stranger";
+      heading = "Hello, stranger";
     } else {
-      heading = "Welcome Back";
+      heading = "Welcome back friend";
       Integer oldAccessCount =
         (Integer)session.getAttribute("accessCount");
       if (oldAccessCount != null) {
@@ -49,29 +49,29 @@ public class SessionServlet extends HttpServlet {
     out.println("<HTML><HEAD><TITLE>"+title+"</TITLE></HEAD>\n" +
                 "<BODY BGCOLOR=\"#FDF5E6\">\n" +
                 "<H1 ALIGN=\"CENTER\">" + heading + "</H1>\n" +
-                "<H2>Information on Your Session:</H2>\n" +
+                "<H2>Information on your HTTPSession:</H2>\n" +
                 "<TABLE BORDER=1 ALIGN=CENTER>\n" +
                 "<TR BGCOLOR=\"#FFAD00\">\n" +
-                "<TH>Info Type</TH><TH>Value</TH>\n" +
+                "<TH>Field name</TH><TH>Value</TH>\n" +
                 "</TR>\n" +
                 "<TR>\n" +
                 "  <TD>ID</TD>\n" +
                 "  <TD>" + session.getId() + "</TD>\n" +
                 "</TR>\n" +
                 "<TR>\n" +
-                "  <TD>Creation Time</TD>\n" +
+                "  <TD>Creation time</TD>\n" +
                 "  <TD>" + new Date(session.getCreationTime()) + "</TD>\n" +
                 "</TR>\n" +
                 "<TR>\n" +
-                "  <TD>Time of Last Access</TD>\n" +
+                "  <TD>Time of last access</TD>\n" +
                 "  <TD>" + new Date(session.getLastAccessedTime()) + "</TD>\n" +
                 "</TR>\n" +
                 "<TR>\n" +
-                "  <TD>Number of Previous Accesses</TD>\n" +
+                "  <TD>Number of previous accesses</TD>\n" +
                 "  <TD>" + accessCount + "</TD>\n" +
                 "</TR>\n" +
                 "<TR>\n" +
-                "  <TD>Server IP Address</TD>\n" +
+                "  <TD>POD IP address</TD>\n" +
                 "  <TD>" + serverIPAddress + "</TD>\n" +
                 "</TR>\n" +
                 "</TABLE>\n" +
