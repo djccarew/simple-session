@@ -4,9 +4,9 @@
 
 ## Overview
 
-Open Liberty has a feature called sessionCache-1.0 which provides distributed in-memory HttpSession caching. The sessionCache-1.0 feature builds on top of an existing technology called JCache (JSR 107), which offers a standardized distributed in-memory caching API. However, even though the feature builds on top of JCache, no direct usage of JCache API is necessary in your application, since Liberty handles the session caching in its HttpSession implementation. In fact, if your application is already using HttpSession caching, it can benefit from sessionCache-1.0 without making any code changes.
+Open Liberty has a feature called **sessionCache-1.0** which provides distributed in-memory HttpSession caching. The **sessionCache-1.0** feature builds on top of an existing technology called JCache (JSR 107), which offers a standardized distributed in-memory caching API. However, even though the feature builds on top of JCache, no direct usage of JCache API is necessary in your application, since Liberty handles the session caching in its HttpSession implementation. In fact, if your application is already using HttpSession caching, it can benefit from **sessionCache-1.0 without making any code changes.**
 
-In this lab you'll use these  capabilities  to deploy and test  a small  Java EE app on OpenShift.
+In this lab you'll use these  capabilities  to deploy and test  a small Java EE app on OpenShift. You'll use an Open Source JCache provider called [Hazelcast](https://github.com/hazelcast/hazelcast) to provide the implementation of the JCache support that is included in Open Liberty. Any compliant JSR 107 product can be used in this manner with Open Liberty.
 
 ### Step 1: Logon into the OpenShift Web Console and to the OpenShift CLI
 
