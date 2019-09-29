@@ -115,7 +115,7 @@ In this lab you'll use these  capabilities  to deploy and test  a small  Java EE
 
 5.2. Keep refreshing the URL and verify that the POD IP address changes each time and the current state of the  session data is maintained and used by all pods.
 
-   ![Online catalog](images/ss11.png)
+   ![Session state shared](images/ss11.gif)
 
 ## FAQs
 
