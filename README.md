@@ -139,4 +139,4 @@ No code changes. The changes needed are to the *server.xml* file and the Dockefi
 </library>
 ```
 **Is peer-to-peer the only mode supported by Hazelcast?**
-No. The peer-to-peer method used here is part of the Hazelcast open source offering(see ). A client-server implementation exists but is sold commercially. Each Liberty pod acts as a client to a separate Hazelcast server deployment. The client-server approach uses less resources per pod vs peer-to-peer and has more features (see).
+No. The peer-to-peer method used here is part of the Hazelcast open source offering(see [https://github.com/hazelcast/hazelcast](https://github.com/hazelcast/hazelcast)). A client-server implementation exists but is sold commercially. With client-server each Liberty pod acts as a client to a separate Hazelcast server deployment. The client-server approach uses less resources per application pod vs peer-to-peer and has more features (see [https://hazelcast.com/products/imdg/](https://hazelcast.com/products/imdg/)).
