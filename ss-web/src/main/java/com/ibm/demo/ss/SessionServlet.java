@@ -25,7 +25,7 @@ public class SessionServlet extends HttpServlet {
     String serverIPAddress = "Unknown";
     Integer accessCount = new Integer(0);;
     if (session.isNew()) {
-      heading = "Hello, stranger";
+      heading = "Hello stranger";
     } else {
       heading = "Welcome back friend";
       Integer oldAccessCount =
@@ -43,7 +43,7 @@ public class SessionServlet extends HttpServlet {
        serverIPAddress = localhost.getHostAddress().trim();
     }
     catch (UnknownHostException e) {
-        System.err.println("Error: cannot get  server IP Address  : " + e.getMessage());
+        System.err.println("Error: cannot get server IP Address  : " + e.getMessage());
     }
 
     out.println("<HTML><HEAD><TITLE>"+title+"</TITLE></HEAD>\n" +
